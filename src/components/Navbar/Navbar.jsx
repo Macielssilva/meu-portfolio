@@ -1,39 +1,58 @@
-import Perfil from "../components/Perfil/Perfil";
-import Footer from "../components/Footer/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import CoteudoInicial from "../components/CoteudoInicial/CoteudoInicial";
-import ConteudoSobre from "../components/ConteudoSobre/ConteudoSobre";
-import ConteudoContato from "../components/ConteudoContato/ConteudoContato";
-
-const App = () => {
+const Navbar = () => {
     return (
-        <BrowserRouter>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
 
-            <div className="container-fluid">
-                <div className="row">
+            <div className="container">
 
-                    <div className="col-12 col-md-4 col-lg-3 border-end min-vh-100 p-3">
-                        <Perfil col={12} />
-                    </div>
+                <NavLink className="navbar-brand fw-bold" to="/">
+                    @macielsilva
+                </NavLink>
 
-                    <div className="col-12 col-md-8 col-lg-9 p-4">
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                        <Routes>
-                            <Route path="/" element={<CoteudoInicial col={12} />} />
-                            <Route path="/sobre" element={<ConteudoSobre col={12} />} />
-                            <Route path="/contato" element={<ConteudoContato col={12} />} />
-                        </Routes>
+                <div className="collapse navbar-collapse" id="menu">
 
-                        <Footer />
+                    <ul className="navbar-nav mx-auto">
 
-                    </div>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/">
+                                <i className="bi bi-house-fill"></i> Home
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/curriculo">
+                                <i className="bi bi-file-earmark-person-fill"></i> Currículo
+                            </NavLink>
+                        </li>
+
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/portfolio">
+                                <i className="bi bi-code-slash"></i> Portfólio
+                            </NavLink>
+                        </li>
+
+                    </ul>
+
+                    <button className="btn btn-outline-light">
+                        <i className="bi bi-moon-fill"></i>
+                    </button>
 
                 </div>
+
             </div>
 
-        </BrowserRouter>
+        </nav>
     );
 };
 
-export default App;
+export default Navbar;

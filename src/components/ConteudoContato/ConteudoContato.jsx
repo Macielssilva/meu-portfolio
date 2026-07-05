@@ -1,42 +1,49 @@
-import React from 'react'
-import Navbar from '../Navbar/Navbar'
-
-const ConteudoContato = ({ col }) => {
+const ConteudoContato = () => {
     return (
-        <div className={`col-12 col-md-${col}`}>
+        <div className="list-group mt-4">
 
-            <Navbar />
+            <a
+                href="mailto:seuemail@email.com"
+                className="list-group-item list-group-item-action"
+            >
+                <i className="bi bi-envelope-fill me-2"></i>
+                maciellsilva@email.com
+            </a>
 
-            {/* Conteúdo Contato */}
-            <div className="container mt-5">
-
-                <h2>Contato</h2>
-
-                <p>
-                    Se quiser entrar em contato comigo, fique à vontade!
-                </p>
-
-                <div className="mt-4">
-
-                    <p>
-                        Email: maciellsilvaao@email.com
-                    </p>
-
-                    <p>
-                        Telefone: (47) 992913789
-                    </p>
-
-                    <p>
-                        LinkedIn: linkedin.com/in/maciel
-                    </p>
-
-                    <p>
-                        GitHub: github.com/Macielssilva
-                    </p>
-
-                </div>
-
+            <div className="list-group-item">
+                <i className="bi bi-geo-alt-fill me-2"></i>
+                Gaspar - SC
             </div>
+
+            <a
+                href="https://www.linkedin.com/in/macielsilva"
+                target="_blank"
+                rel="noreferrer"
+                className="list-group-item list-group-item-action"
+            >
+                <i className="bi bi-linkedin me-2"></i>
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/Macielssilva"
+                target="_blank"
+                rel="noreferrer"
+                className="list-group-item list-group-item-action"
+            >
+                <i className="bi bi-github me-2"></i>
+                GitHub
+            </a>
+
+            <a
+                href="https://instagram.com/eimaciell"
+                target="_blank"
+                rel="noreferrer"
+                className="list-group-item list-group-item-action"
+            >
+                <i className="bi bi-instagram me-2"></i>
+                Instagram
+            </a>
 
         </div>
     )

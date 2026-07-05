@@ -1,16 +1,31 @@
-// src/pages/Contato.jsx
 import Perfil from "../components/Perfil/Perfil";
-import Footer from "../components/Footer/Footer";
 import ConteudoContato from "../components/ConteudoContato/ConteudoContato";
-const Contato = () => {
+import Footer from "../components/Footer/Footer";
+
+const Curriculo = () => {
     return (
-        <div className="container">
-            <div className="row">
-                <Perfil col={4} />
-                <ConteudoContato col={8} />
-            </div>
-            <Footer />
+        <div>
+
+            <h1 className="fw-bold">
+                Currículo
+            </h1>
+
+            <hr />
+
+            <h3>Formação</h3>
+
+            <p>
+                Técnico em Informática - IFSC
+            </p>
+
+            <h3>Experiência</h3>
+
+            <p>
+                Em desenvolvimento...
+            </p>
+
         </div>
     );
 };
-export default Contato;
+
+export default Curriculo;

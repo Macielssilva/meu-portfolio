@@ -28,6 +28,14 @@ const Perfil = () => {
             <p className="small text-muted">
                 Gaspar - SC
             </p>
+            <a
+              href="/Curriculo_Maciel.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+         >
+              Baixar meu Currículo
+            </a>
 
         </div>
     )

@@ -2,6 +2,7 @@
   "name": "helloreact",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://macielssilva.github.io/meu-portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -36,3 +37,4 @@
     "vite": "^8.0.14"
   }
 }
+

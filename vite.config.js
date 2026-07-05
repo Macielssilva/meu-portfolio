@@ -1,14 +1,7 @@
-// vite.config.js
-import { defineConfig } from "vite";
-import react, { reactCompilerPreset } from "@vitejs/plugin-react";
-import babel from "@rolldown/plugin-babel";
-export default defineConfig(({ command, isPreview }) => ({
-  plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] }),
-  ],
-  base:
-    command === "build" || isPreview === true
-      ? "/HelloReact/"
-      : "/",
-}));
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/meu-portfolio/'
+})
